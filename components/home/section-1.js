@@ -45,7 +45,7 @@ export default function Section() {
       <div className="grid grid-cols-12">
         {services.map((service) => {
           return (
-            <div className="col-span-12 md:col-span-4 p-4">
+            <div key={service.name} className="col-span-12 md:col-span-4 p-4">
               <div className="what-we-do-item border rounded-lg shadow-xl px-6 py-12 text-center">
                 <h3 className="text-2xl mb-4">{service.name}</h3>
                 <div className="text-gray-400 leading-tight mt-2 mb-6 text-lg">{service.subtitle}</div>

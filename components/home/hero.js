@@ -17,7 +17,7 @@ export default function Hero() {
     return () => {
       tl.kill();
     };
-  }, []);
+  });
 
   return (
     <div

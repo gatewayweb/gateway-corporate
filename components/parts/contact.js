@@ -50,10 +50,11 @@ export default function Contact() {
     <>
       <div className="w-[500px] max-w-full mx-auto flex flex-wrap justify-center">
         <div className="pt-4 pb-5 w-full min-w-full text-center text-gray-500">(Select as many as you want)</div>
-        {services.map((service) => {
+        {services.map((service, index) => {
           const isActive = form.services.includes(service);
           return (
             <button
+              key={index}
               onClick={() => toggleService(service)}
               className={`group flex items-center border rounded  px-4 py-2 mb-2 mx-1 transition-all duration-500 font-semibold ${
                 isActive ? buttonActive : buttonNormal
