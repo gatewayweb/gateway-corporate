@@ -4,7 +4,6 @@
 
 @layer base {
   body {
-    padding-top: 80px;
     @apply text-gray-700;
   }
 

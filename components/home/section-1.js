@@ -46,10 +46,9 @@ export default function Section() {
         {services.map((service) => {
           return (
             <div key={service.name} className="col-span-12 md:col-span-4 p-4">
-              <div className="what-we-do-item border rounded-lg shadow-xl px-6 py-12 text-center">
-                <h3 className="text-2xl mb-4">{service.name}</h3>
-                <div className="text-gray-400 leading-tight mt-2 mb-6 text-lg">{service.subtitle}</div>
-                <a href="#">Learn More</a>
+              <div className="what-we-do-item border border-gray-100 rounded-lg shadow-xl px-6 py-12 text-center">
+                <h3 className="text-2xl mb-4 text-blue-900">{service.name}</h3>
+                <div className="text-gray-500 leading mt-2 mb-6 text-lg">{service.subtitle}</div>
               </div>
             </div>
           );

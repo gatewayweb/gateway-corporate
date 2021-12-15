@@ -29,7 +29,7 @@ export default function Hero() {
         objectFit="cover"
         objectPosition="center center"
         src="/home-hero-bg.jpg"
-        className="opacity-60"
+        className="opacity-80"
       />
       <div className="hero-overlay opacity-0 absolute h-full w-full left-0 top-0 bg-gradient-radial from-black to-transparent"></div>
 
