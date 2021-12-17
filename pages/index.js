@@ -14,7 +14,7 @@ export default function Home() {
 
       <Section1 />
 
-      <div className="bg-gray-100 py-20">
+      <div className="bg-gray-100">
         <div className="container px-6 mx-auto">
           <Contact />
         </div>

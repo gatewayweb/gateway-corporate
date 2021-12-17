@@ -13,10 +13,8 @@ const services = [
   'Search Engine Optimization',
   'Website Work',
   'Social Media',
-  'Website Redesign',
-  'Print Design',
-  'Online Shop',
-  'Other',
+  'Consulting',
+  'Not Sure',
 ];
 
 const FormSuccess = () => {
@@ -87,6 +85,9 @@ export default function Contact() {
     'bg-blue-500 text-white border-blue-500 hover:text-gray-100 hover:border-blue-800 drop-shadow-lg';
 
   useEffect(() => {
+    if (swiper) {
+      swiper.updateAutoHeight();
+    }
     if (form.services.length) {
       gsap.to(serviceNext.current, { opacity: 1, y: 0, duration: 0.25 });
     } else {
@@ -96,7 +97,6 @@ export default function Contact() {
 
   useEffect(() => {
     if (form.email.length) {
-      console.log(submitButton);
       gsap.to(submitButton.current, { opacity: 1, y: 0, duration: 0.25 });
     } else {
       gsap.to(submitButton.current, { opacity: 0, y: 10, duration: 0.25 });
@@ -141,9 +141,13 @@ export default function Contact() {
     }
   };
 
+  const testFire = () => {
+    section.current.scrollIntoView();
+  };
+
   return (
     <>
-      <div ref={section} className="">
+      <div ref={section} className="py-20">
         <Swiper
           autoHeight={true}
           onSwiper={setSwiper}
@@ -165,25 +169,42 @@ export default function Contact() {
                   <button
                     key={index}
                     onClick={() => toggleService(service)}
-                    className={`service-button group flex items-center border rounded  px-4 py-2 mb-2 mx-1 transition-all duration-200 font-semibold ${
+                    className={`service-button group flex items-center border rounded  px-4 py-2 mb-2 mx-1 transition-all duration-200 font-semibold w-full lg:w-auto ${
                       isActive ? buttonActive : buttonNormal
                     }`}
                   >
+                    <span
+                      className={`mr-1 text-2xl relative top-[-2px] transition-transform duration-500 font-normal ${
+                        isActive ? 'transform rotate-45' : ''
+                      }`}
+                    >
+                      +
+                    </span>
                     {service}
                   </button>
                 );
               })}
 
               <div ref={serviceNext} className="text-center pt-6 opacity-0 w-full">
-                <Button customClasses="contact-next-button text-2xl">Next</Button>
+                <Button customClasses="contact-next-button text-2xl" onClick={testFire}>
+                  Next
+                </Button>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="w-[500px] max-w-full mx-auto">
+              <div className="w-full text-left">
+                <Button
+                  color="light-gray"
+                  customClasses="contact-prev-button text-sm font-normal mb-4 lg:mb-0 lg:ml-6 lg:px-4"
+                >
+                  Back
+                </Button>
+              </div>
               <div className="text-center">
                 <h2>One More Thing...</h2>
-                <div className="px-6 pt-8">
+                <div className="lg:px-6 pt-8">
                   <input
                     name="email"
                     value={form.email}
@@ -193,7 +214,7 @@ export default function Contact() {
                     placeholder="Enter your email"
                   />
                 </div>
-                <div className="pt-8 px-6">
+                <div className="pt-8 lg:px-6">
                   <div className="pb-2 text-center text-gray-500">Give us some more details (optional)</div>
                   <textarea
                     name="details"
@@ -201,16 +222,10 @@ export default function Contact() {
                     className="rounded drop-shadow-xl w-full h-24 p-4 resize-none"
                   ></textarea>
                 </div>
-                <div className="text-center pt-8 w-full flex justify-center">
-                  <Button color="light-gray" customClasses="contact-prev-button text-2xl font-normal">
-                    Back
+                <div className="pt-6 text-center w-full flex justify-center opacity-0" ref={submitButton}>
+                  <Button customClasses="contact-next-button text-2xl" onClick={onSubmit}>
+                    Submit
                   </Button>
-
-                  <div className="opacity-0" ref={submitButton}>
-                    <Button customClasses="contact-next-button text-2xl ml-6" onClick={onSubmit}>
-                      Submit
-                    </Button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -221,7 +236,7 @@ export default function Contact() {
             ) : form.fail ? (
               <FormError swiper={swiper} />
             ) : (
-              <div className="text-lg text-gray-400">Loading...</div>
+              <div className="text-lg text-gray-400 h-[300px]">Loading...</div>
             )}
           </SwiperSlide>
         </Swiper>

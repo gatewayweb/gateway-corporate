@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="hero-overlay opacity-0 absolute h-full w-full left-0 top-0 bg-gradient-radial from-black to-transparent"></div>
 
       <div className="hero-content relative">
-        <h1 className="opacity-0 text-white">
+        <h1 className="opacity-0 text-white text-center lg:text-left">
           Welcome to your <span className="font-black">Gateway</span>
         </h1>
         <div className="hero-subtitle text-center text-lg pt-4 uppercase tracking-wide text-gray-400 font-bold">

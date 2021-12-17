@@ -6,6 +6,9 @@ export default function Button({ children, color, customClasses, ...props }) {
   let buttonClasses;
 
   switch (color) {
+    case 'link':
+      buttonClasses = 'text-sm text-gray-500 hover:text-gray-600';
+      break;
     case 'light-gray':
       buttonClasses = 'bg-gray-200 text-gray-600 hover:bg-gray-300';
       break;
