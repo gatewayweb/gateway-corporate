@@ -44,7 +44,7 @@ export default function OurWorkPage() {
   return (
     <>
       <Head>
-        <title>Gateway Web - Contact - Web Design, Digital Marketing & Search Engine Optimization</title>
+        <title>Gateway Web - Contact - Web Design, Digital Marketing &amp; Search Engine Optimization</title>
       </Head>
 
       <div className="bg-gray-100 py-12 px-6 h-full flex-grow">
@@ -52,7 +52,7 @@ export default function OurWorkPage() {
           <h1 className="text-center">Our Work</h1>
           <div className="py-4 w-[500px] max-w-full text-lg mx-auto text-center">
             While we cannot show all of our work, here are some recent examples (with our customers permission of
-            course). Interested in hearing about what else we've been up to?{' '}
+            course). Interested in hearing about what else we have been up to?{' '}
             <Link href="/contact" passHref>
               <a className="text-blue-500 font-semibold">Reach out to us</a>
             </Link>
