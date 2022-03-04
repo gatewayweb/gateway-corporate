@@ -6,33 +6,52 @@ import NavigationLink from './navigation-link';
 
 const navigation = [
   {
-    text: 'Our Work',
-    href: '/our-work',
-  },
-  {
     text: 'Contact',
     href: '/contact',
+  },
+  {
+    text: 'Services',
+    href: '/services',
   },
 ];
 
 export default function Layout({ children }) {
   const date = new Date();
   const year = date.getFullYear();
+  const org = {
+    '@context': 'http://schema.org',
+    '@type': 'Organization',
+    name: 'Gateway Web',
+    description:
+      'Web development agency including web design, JAMStack development, Wordpress development, Ecommerce websites and more.',
+    url: 'https://gatewayweb.net',
+    telephone: '6172949889',
+    sameAs: ['https://www.facebook.com/GW.Web', 'https://www.instagram.com/gatewayweb/'],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Boston',
+      postalCode: '02101',
+      addressCountry: 'United States',
+    },
+  };
+
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
       </Head>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+
       <div className="flex flex-col h-full min-h-screen pt-[80px]">
-        <header className="grid grid-cols-12 px-6 py-4 fixed left-0 top-0 w-full h-[80px] z-20 bg-white bg-opacity-60 backdrop-filter backdrop-blur">
-          <div className="col-span-12 flex justify-center md:justify-start md:col-span-4">
+        <header className="flex px-6 py-4 fixed left-0 top-0 w-full h-[80px] z-20 bg-white bg-opacity-80 backdrop-filter backdrop-blur">
+          <div className="w-full flex justify-center md:justify-start md:w-1/3">
             <Link href="/" passHref>
               <a className="transition-transform hover:scale-[1.02]">
                 <Image src="/logo-2.png" width={247} height={49} />
               </a>
             </Link>
           </div>
-          <div className="hidden md:col-span-8 md:flex justify-end items-center">
+          <div className="hidden md:w-2/3 md:flex justify-end items-center">
             <div className="">
               {navigation.map((link, index) => {
                 return <NavigationLink key={index} href={link.href} text={link.text} />;

@@ -8,14 +8,7 @@ import axios from 'axios';
 import Button from './button';
 import Link from 'next/link';
 
-const services = [
-  'New Website',
-  'Search Engine Optimization',
-  'Website Work',
-  'Social Media',
-  'Consulting',
-  'Not Sure',
-];
+const services = ['New Website', 'Website Work', 'Search Engine Optimization', 'Consulting', 'Something Else'];
 
 const FormSuccess = () => {
   return (
@@ -169,7 +162,7 @@ export default function Contact() {
                   <button
                     key={index}
                     onClick={() => toggleService(service)}
-                    className={`service-button group flex items-center border rounded  px-4 py-2 mb-2 mx-1 transition-all duration-200 font-semibold w-full lg:w-auto ${
+                    className={`service-button group flex items-center border rounded-lg px-4 py-2 mb-2 mx-1 transition-all duration-200 font-semibold w-full lg:w-auto ${
                       isActive ? buttonActive : buttonNormal
                     }`}
                   >

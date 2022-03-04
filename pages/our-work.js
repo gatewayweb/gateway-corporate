@@ -52,18 +52,23 @@ export default function OurWorkPage() {
           <h1 className="text-center">Our Work</h1>
           <div className="py-4 w-[500px] max-w-full text-lg mx-auto text-center">
             While we cannot show all of our work, here are some recent examples (with our customers permission of
-            course). Interested in hearing about what else we have been up to?{' '}
+            course).
+            <br />
+            <br />
+            Interested in hearing about what else we have been up to?{' '}
             <Link href="/contact" passHref>
-              <a className="text-blue-500 font-semibold">Reach out to us</a>
+              <a className="text-blue-500 font-bold mt-3 inline-block rounded-lg px-4 py-1 border border-blue-500">
+                I Want to Hear More
+              </a>
             </Link>
           </div>
-          <div className="grid grid-cols-12 pt-12">
+          <div className="flex flex-wrap justify-center pt-12">
             {work.map((item, index) => {
               return (
-                <div key={index} className="col-span-12 lg:col-span-3 p-3">
-                  <div className="bg-blue-900 w-full p-6 flex flex-col justify-end items-center rounded-lg">
-                    <h3 className="text-white">{item.name}</h3>
-                    <div className="text-gray-200 text-sm">{item.website}</div>
+                <div key={index} className="w-full lg:w-1/4 p-3">
+                  <div className="bg-gray-200 w-full p-6 flex flex-col justify-end items-center rounded-lg">
+                    <h3 className="">{item.name}</h3>
+                    <div className="text-gray-400 text-sm">{item.website}</div>
                   </div>
                 </div>
               );
