@@ -38,15 +38,6 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
-        <link rel="canonical" key="canonical" href="https://gatewayweb.net" />
-        <meta name="robots" content="follow, index" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="og:email" content="sam@gatewayweb.net" />
-        <meta name="og:phone_number" content="+1-617-294-9889" />
-        <meta name="og:site_name" content="Gateway Web" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Gateway Web - Full Service Digital Solutions" />
-
         <meta
           name="og:image"
           key="og:image"
@@ -59,14 +50,21 @@ export default function Layout({ children }) {
           key="og:description"
           content="Digital company specializing in creating high quality websites for enterprise."
         />
+        <meta name="og:email" content="sam@gatewayweb.net" />
+        <meta name="og:phone_number" content="+1-617-294-9889" />
+        <meta name="og:site_name" content="Gateway Web" />
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://gatewayweb.net/" />
+        <link rel="canonical" key="canonical" href="https://gatewayweb.net" />
+        <meta name="robots" content="follow, index" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gateway Web - Full Service Digital Solutions" />
         <meta
           name="description"
           key="description"
           content="Digital company specializing in creating high quality websites for enterprise."
         />
-
-        <meta name="og:type" content="website" />
-        <meta name="og:url" content="https://gatewayweb.net/" />
       </Head>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
 

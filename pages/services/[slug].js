@@ -11,6 +11,8 @@ export default function Service({ service, slug }) {
       <Head>
         <title>Gateway Web - {service.seo.title}</title>
         <link rel="canonical" key="canonical" href={`https://gatewayweb.net/services/${slug}`} />
+        <meta name="og:description" key="og:description" content={service?.seo?.description} />
+        <meta name="description" key="description" content={service?.seo?.description} />
       </Head>
       <div className="bg-gray-100 py-12 h-full flex-grow">
         <div className="container mx-auto text-center">

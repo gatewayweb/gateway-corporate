@@ -12,19 +12,19 @@ export default function Services() {
       href: '/services/jamstack',
     },
     {
+      name: 'Search Engine Optimization',
+      href: '/services/digital-marketing',
+    },
+    {
       name: 'Ecommerce Development',
       href: '/services/ecommerce',
     },
     {
-      name: 'Wordpress Websites',
+      name: 'Wordpress',
       href: '/services/wordpress',
     },
     {
       name: 'Digital Marketing',
-      href: '/services/digital-marketing',
-    },
-    {
-      name: 'Search Engine Optimization',
       href: '/services/digital-marketing',
     },
     {
