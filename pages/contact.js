@@ -7,7 +7,7 @@ export default function ContactPage() {
     <>
       <Head>
         <title>Gateway Web - Contact - Web Design, Digital Marketing & Search Engine Optimization</title>
-        <link rel="canonical" key="canonical" href="https://gatewayweb.net/contact" />
+        <link rel="canonical" key="canonical" href="https://www.gatewayweb.net/contact" />
         <meta
           name="og:title"
           content="Gateway Web - Contact - Web Design, Digital Marketing & Search Engine Optimization"

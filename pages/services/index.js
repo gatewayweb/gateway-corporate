@@ -37,7 +37,7 @@ export default function Services() {
       <Head>
         <title>Gateway Web - Services - Web Development, JAMStack, Wordpress</title>
 
-        <link rel="canonical" key="canonical" href="https://gatewayweb.net/services" />
+        <link rel="canonical" key="canonical" href="https://www.gatewayweb.net/services" />
       </Head>
       <div className="bg-gray-100 py-12 px-6 h-full flex-grow">
         <div className="container mx-auto">

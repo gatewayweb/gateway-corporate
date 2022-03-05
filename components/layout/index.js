@@ -24,7 +24,7 @@ export default function Layout({ children }) {
     name: 'Gateway Web',
     description:
       'Web development agency including web design, JAMStack development, Wordpress development, Ecommerce websites and more.',
-    url: 'https://gatewayweb.net',
+    url: 'https://www.gatewayweb.net',
     telephone: '6172949889',
     sameAs: ['https://www.facebook.com/GW.Web', 'https://www.instagram.com/gatewayweb/'],
     address: {
@@ -54,8 +54,8 @@ export default function Layout({ children }) {
         <meta name="og:phone_number" content="+1-617-294-9889" />
         <meta name="og:site_name" content="Gateway Web" />
         <meta name="og:type" content="website" />
-        <meta name="og:url" content="https://gatewayweb.net/" />
-        <link rel="canonical" key="canonical" href="https://gatewayweb.net" />
+        <meta name="og:url" content="https://www.gatewayweb.net/" />
+        <link rel="canonical" key="canonical" href="https://www.gatewayweb.net" />
         <meta name="robots" content="follow, index" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="twitter:card" content="summary_large_image" />

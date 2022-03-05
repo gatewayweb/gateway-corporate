@@ -10,7 +10,7 @@ export default function Service({ service, slug }) {
     <>
       <Head>
         <title>{service.seo.title}</title>
-        <link rel="canonical" key="canonical" href={`https://gatewayweb.net/services/${slug}`} />
+        <link rel="canonical" key="canonical" href={`https://www.gatewayweb.net/services/${slug}`} />
         <meta name="og:description" key="og:description" content={service?.seo?.description} />
         <meta name="description" key="description" content={service?.seo?.description} />
       </Head>
