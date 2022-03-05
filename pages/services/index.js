@@ -4,6 +4,10 @@ import Link from 'next/link';
 export default function Services() {
   const services = [
     {
+      name: 'Web Development',
+      href: '/services/web-development',
+    },
+    {
       name: 'JAMStack Development',
       href: '/services/jamstack',
     },
@@ -32,6 +36,8 @@ export default function Services() {
     <>
       <Head>
         <title>Gateway Web - Services - Web Development, JAMStack, Wordpress</title>
+
+        <link rel="canonical" key="canonical" href="https://gatewayweb.net/services" />
       </Head>
       <div className="bg-gray-100 py-12 px-6 h-full flex-grow">
         <div className="container mx-auto">

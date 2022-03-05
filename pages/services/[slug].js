@@ -5,11 +5,12 @@ import Link from 'next/link';
 import { getService, getServiceSlugs } from '@/lib/api';
 import Cta from '@/components/cta';
 
-export default function Service({ service }) {
+export default function Service({ service, slug }) {
   return (
     <>
       <Head>
         <title>Gateway Web - {service.seo.title}</title>
+        <link rel="canonical" key="canonical" href={`https://gatewayweb.net/services/${slug}`} />
       </Head>
       <div className="bg-gray-100 py-12 h-full flex-grow">
         <div className="container mx-auto text-center">
@@ -70,5 +71,5 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const service = await getService(params?.slug);
 
-  return { props: { service } };
+  return { props: { service, slug: params.slug } };
 }

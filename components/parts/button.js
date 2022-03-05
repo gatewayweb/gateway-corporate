@@ -21,7 +21,7 @@ export default function Button({ children, color, customClasses, ...props }) {
 
   return (
     <button
-      className={`rounded text-lg font-bold px-8 py-2 transition-all duration-300 ${buttonClasses} ${customClasses}`}
+      className={`rounded-full text-lg font-bold px-8 py-2 transition-all duration-300 ${buttonClasses} ${customClasses}`}
       {...props}
     >
       {children}

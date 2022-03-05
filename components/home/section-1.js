@@ -38,7 +38,7 @@ export default function Section({ content }) {
     <div ref={section} className="lg:container mx-auto w-full max-w-full px-6 py-20">
       <h2 className="text-center">What We Do</h2>
       <div className="subtitle text-center w-[600px] max-w-full mx-auto text-lg mb-6 mt-2 text-gray-500">
-        <strong>We can adapt to your business and create a customized experience.</strong>
+        <strong>We adapt to your business and create a customized experience.</strong>
       </div>
       <div className="flex flex-wrap justify-center">
         {services.map((service) => {

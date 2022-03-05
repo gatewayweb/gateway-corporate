@@ -38,7 +38,35 @@ export default function Layout({ children }) {
   return (
     <>
       <Head>
+        <link rel="canonical" key="canonical" href="https://gatewayweb.net" />
+        <meta name="robots" content="follow, index" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="og:email" content="sam@gatewayweb.net" />
+        <meta name="og:phone_number" content="+1-617-294-9889" />
+        <meta name="og:site_name" content="Gateway Web" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gateway Web - Full Service Digital Solutions" />
+
+        <meta
+          name="og:image"
+          key="og:image"
+          content="https://media.graphcms.com/Bvl7soWDQIyGi9HQ1EYt
+        "
+        />
+        <meta name="og:image:alt" key="og:image:alt" content="Gateway Web - Full Service Digital Solutions" />
+        <meta
+          name="og:description"
+          key="og:description"
+          content="Digital company specializing in creating high quality websites for enterprise."
+        />
+        <meta
+          name="description"
+          key="description"
+          content="Digital company specializing in creating high quality websites for enterprise."
+        />
+
+        <meta name="og:type" content="website" />
+        <meta name="og:url" content="https://gatewayweb.net/" />
       </Head>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
 
@@ -64,20 +92,21 @@ export default function Layout({ children }) {
           <div className="opacity-90 flex flex-col justify-center">
             <Image src="/logo-white.svg" width={200} height={35} />
             <div className="flex justify-center flex-wrap text-gray-200 text-sm font-semibold uppercase py-4 max-w-full">
-              <Link href="#">
+              <Link href="/">
                 <a className="mx-2">Home</a>
               </Link>
-              <Link href="#">
-                <a className="mx-2">Our Work</a>
-              </Link>
-              <Link href="#">
+              <Link href="/contact">
                 <a className="mx-2">Contact</a>
               </Link>
-              <Link href="#">
-                <a className="mx-2">Facebook</a>
+              <Link href="https://www.facebook.com/GW.Web">
+                <a target="_blank" className="mx-2">
+                  Facebook
+                </a>
               </Link>
-              <Link href="#">
-                <a className="mx-2">Instagram</a>
+              <Link href="https://www.instagram.com/gatewayweb/">
+                <a target="_blank" className="mx-2">
+                  Instagram
+                </a>
               </Link>
             </div>
             <div className="text-gray-400 text-sm pl-2 text-center">&copy; Copyright {year} Gatewayweb.net</div>
