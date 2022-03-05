@@ -223,7 +223,11 @@ export default function Contact() {
                   ></textarea>
                 </div>
                 <div className="pt-6 text-center w-full flex justify-center opacity-0" ref={submitButton}>
-                  <Button customClasses="contact-next-button text-2xl rounded-full" onClick={onSubmit}>
+                  <Button
+                    id="contact-submit"
+                    customClasses="contact-next-button text-2xl rounded-full"
+                    onClick={onSubmit}
+                  >
                     Submit
                   </Button>
                 </div>
