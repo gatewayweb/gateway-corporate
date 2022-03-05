@@ -77,7 +77,7 @@ export default function Layout({ children }) {
               </a>
             </Link>
           </div>
-          <div className="hidden md:w-2/3 md:flex justify-end items-center">
+          <div className="flex w-2/3 justify-end items-center">
             <div className="">
               {navigation.map((link, index) => {
                 return <NavigationLink key={index} href={link.href} text={link.text} />;
