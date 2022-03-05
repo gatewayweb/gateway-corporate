@@ -70,7 +70,7 @@ export default function Layout({ children }) {
 
       <div className="flex flex-col h-full min-h-screen pt-[80px]">
         <header className="flex px-6 py-4 fixed left-0 top-0 w-full h-[80px] z-20 bg-white bg-opacity-80 backdrop-filter backdrop-blur">
-          <div className="w-full flex justify-center md:justify-start md:w-1/3">
+          <div className="w-full flex items-center justify-center md:justify-start md:w-1/3">
             <Link href="/" passHref>
               <a className="transition-transform hover:scale-[1.02]">
                 <Image src="/logo-2.png" width={247} height={49} />

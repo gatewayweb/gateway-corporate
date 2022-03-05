@@ -22,7 +22,7 @@ export default function Hero({ title, subtitle, image }) {
   return (
     <div
       ref={section}
-      className="relative flex justify-center items-center w-full h-[400px] lg:h-[600px] overflow-hidden"
+      className="relative flex justify-center items-center w-full h-[450px] lg:h-[600px] overflow-hidden"
     >
       <Image
         layout="fill"
@@ -34,12 +34,12 @@ export default function Hero({ title, subtitle, image }) {
       />
       <div className="hero-overlay opacity-0 absolute h-full w-full left-0 top-0 bg-gradient-radial from-blue-400 to-gray-400"></div>
 
-      <div className="hero-content relative flex flex-col items-center">
+      <div className="hero-content container relative flex flex-col items-center">
         <h1 className="opacity-0 text-white text-center text-6xl md:text-8xl drop-shadow-xl">
           <strong>Your</strong> Gateway
         </h1>
         <div className="hero-subtitle border border-gray-300 rounded-full mt-8 bg-black bg-opacity-30 drop-shadow-lg">
-          <div className="text-center text-lg py-3 px-8 uppercase tracking-wide text-gray-300 font-bold">
+          <div className="text-center text-sm md:text-lg py-3 px-4 md:px-8 uppercase tracking-wide text-gray-300 font-bold">
             {subtitle}
           </div>
         </div>

@@ -39,7 +39,7 @@ export default function Services() {
 
         <link rel="canonical" key="canonical" href="https://www.gatewayweb.net/services" />
       </Head>
-      <div className="bg-gray-100 py-12 px-6 h-full flex-grow">
+      <div className="bg-gray-100 py-12 px-6 h-full flex flex-col justify-center flex-grow">
         <div className="container mx-auto">
           <h1 className="text-center">Services</h1>
           <div className="py-4 w-[700px] max-w-full text-lg mx-auto text-center leading-snug">
@@ -50,7 +50,7 @@ export default function Services() {
             {services.map((service, index) => {
               return (
                 <Link href={service.href} key={index}>
-                  <a className="border border-blue-500 text-blue-500 font-bold rounded-full px-6 py-3 mb-4 mr-4 text-lg">
+                  <a className="border border-blue-500 text-blue-500 font-bold rounded-full px-6 py-3 mb-4 mr-4 text-sm w-full text-center md:w-auto md:text-lg">
                     {service.name}
                   </a>
                 </Link>
